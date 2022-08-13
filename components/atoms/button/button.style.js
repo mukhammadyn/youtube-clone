@@ -6,13 +6,13 @@ export const ButtonWrapper = styled.button`
   padding: 0;
   background: transparent;
   border: none;
-  ${props => props.round && 'border-radius: 50%;'}
+  ${(props) => props.round && "border-radius: 50%;"}
   cursor: pointer;
-  color: ${(light, themeColor) => {
-    if(light) {
-      return isDark(themeColor, '#FFFFFF', '#00000')
+  ${({ light, themeColor }) => {
+    if (light) {
+      return `color: ${isDark(themeColor, "#FFFFFF", "#00000")};`;
     } else {
-      return isDark(themeColor, '#909090', '#00000')
+      return `color: ${isDark(themeColor, "#909090", "#00000")};`;
     }
   }};
-`
+`;

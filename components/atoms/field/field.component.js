@@ -1,12 +1,11 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useContext, useState } from "react";
+import MainContext from "../../../context/main-context";
 import { Input } from "./field.style";
 
-const Field = (
-  { type, name, themeColor, placeholder, label, ...props },
-  ref
-) => {
+const Field = ({ type, name, placeholder, label, ...props }, ref) => {
+  const { themeColor } = useContext(MainContext);
 
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState("");
 
   return (
     <Input

@@ -3,9 +3,9 @@ import { FilterBadges } from "../../molecules/filter-badges/filter-badges.compon
 import { useCategoriesFIlterProps } from "./categories-filter.props";
 import { CategoriesFilterWrapper } from "./categories-filter.style";
 
-export const CategoriesFilter = hoc(useCategoriesFIlterProps, ({categories}) => {
+export const CategoriesFilter = hoc(useCategoriesFIlterProps, ({categories, themeColor}) => {
   return (
-    <CategoriesFilterWrapper>
+    <CategoriesFilterWrapper themeColor={themeColor}>
       <FilterBadges categories={categories} />
     </CategoriesFilterWrapper>
   );

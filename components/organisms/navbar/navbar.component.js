@@ -33,11 +33,11 @@ import machinesImg from "../../../assets/img/machines.png";
 
 export const Navbar = hoc(
   useNavbarProps,
-  ({ active, handleOnClick, openBar }) => {
+  ({ active, handleOnClick, openBar, themeColor }) => {
     return (
       <>
         {openBar && (
-          <NavbarWrapper onClick={handleOnClick}>
+          <NavbarWrapper themeColor={themeColor} onClick={handleOnClick}>
             <NavbarComponent>
               <BarNav active={active} id="1">
                 <HomeIcon />

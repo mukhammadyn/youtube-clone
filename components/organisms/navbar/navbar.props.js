@@ -8,11 +8,12 @@ export const useNavbarProps = () => {
     if (e.target.matches("a[id]")) setActive(e.target.id);
   };
 
-  const {openBar} = useContext(MainContext)
+  const {openBar, themeColor} = useContext(MainContext)
 
   return {
     active,
     handleOnClick,
     openBar,
+    themeColor,
   };
 };

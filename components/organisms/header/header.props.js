@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react"
+import { useContext, useState } from "react";
+import MainContext from "../../../context/main-context";
 
 export const useHeaderProps = () => {
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
 
-  // useEffect(() => {
-  //   if(window.innerHeight <= 500) {
-  //     setOpen(true)
-  //   }
-  // }, [])
+  const { themeColor } = useContext(MainContext);
 
   return {
     isOpen,
     setOpen,
-  }
-}
+    themeColor,
+  };
+};

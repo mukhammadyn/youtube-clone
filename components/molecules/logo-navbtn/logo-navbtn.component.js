@@ -13,8 +13,8 @@ export const LogoNavBtn = () => {
 
   return (
     <LogoNavBtnWrapper>
-      <Button>
-        <Burger onClick={() => setOpenBar(prev => !prev)} />
+      <Button onClick={() => setOpenBar(prev => !prev)}>
+        <Burger />
       </Button>
       <Logo />
     </LogoNavBtnWrapper>

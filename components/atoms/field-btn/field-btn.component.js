@@ -1,7 +1,12 @@
-import { FieldBtnWrapper } from "./field-btn.style"
+import { useContext } from "react";
+import MainContext from "../../../context/main-context";
+import { FieldBtnWrapper } from "./field-btn.style";
 
-export const FieldBtn = ({themeColor, children, round}) => {
-  return <FieldBtnWrapper round={round} themeColor={themeColor}>
-    {children}
-  </FieldBtnWrapper>
-}
+export const FieldBtn = ({ children, round }) => {
+  const {themeColor} = useContext(MainContext)
+  return (
+    <FieldBtnWrapper round={round} themeColor={themeColor}>
+      {children}
+    </FieldBtnWrapper>
+  );
+};

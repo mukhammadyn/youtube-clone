@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import isDark from "../../../utils/isDark";
 
 export const NavbarComponentWrapper = styled.section`
   padding: 12px 0;
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid  ${props => isDark(props.themeColor, '#303030', '#E5E5E5')}
 `
 
 export const NavbarComponentTitle = styled.h3`

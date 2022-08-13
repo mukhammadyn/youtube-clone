@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { nanoid } from "@reduxjs/toolkit";
+import MainContext from "../../../context/main-context";
 
 export const useCategoriesFIlterProps = () => {
   const [categories, setCategories] = useState([]);
@@ -77,7 +78,10 @@ export const useCategoriesFIlterProps = () => {
     ]);
   }, []);
 
+  const {themeColor} = useContext(MainContext)
+
   return {
     categories,
+    themeColor,
   }
 };

@@ -6,9 +6,9 @@ import { SearchFormModal } from "../../molecules/search-modal/search-modal.compo
 import { useHeaderProps } from "./header.props";
 import { HeaderWrapper } from "./header.style";
 
-export const Header = hoc(useHeaderProps, ({isOpen, setOpen}) => {
+export const Header = hoc(useHeaderProps, ({isOpen, setOpen, themeColor}) => {
   return (
-    <HeaderWrapper>
+    <HeaderWrapper themeColor={themeColor}>
       <LogoNavBtn />
       <SearchForm />
       <HeaderButtons setOpen={setOpen} />

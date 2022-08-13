@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import MainContext from "../../../context/main-context"
 
 export const useFilterBadgesProps = ({categories}) => {
   const [active, setActive] = useState({id: 'XtTd'})
+
+  const {themeColor} = useContext(MainContext)
 
   const handleCategoriesClick = (e) => {
     if(e.target.matches('button[id]')) {
@@ -15,6 +18,7 @@ export const useFilterBadgesProps = ({categories}) => {
 
   return {
     active,
+    themeColor,
     setActive,
     handleCategoriesClick,
   }

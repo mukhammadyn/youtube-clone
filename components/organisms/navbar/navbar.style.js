@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import isDark from "../../../utils/isDark";
 
 export const NavbarWrapper = styled.nav`
   width: 100%;
@@ -6,6 +7,7 @@ export const NavbarWrapper = styled.nav`
   max-height: 100vh;
   flex-shrink: 0;
   overflow-x: hidden;
+  background-color: ${props => isDark(props.themeColor, '#212121', '#fff')};
 
   &::-webkit-scrollbar {
     width: 6px;
