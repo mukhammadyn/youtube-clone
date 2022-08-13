@@ -31,111 +31,148 @@ import rallyImg from "../../../assets/img/cicruit-rally.png";
 import travelImg from "../../../assets/img/travellers.png";
 import machinesImg from "../../../assets/img/machines.png";
 
-export const Navbar = hoc(useNavbarProps, ({ active, handleOnClick }) => {
-  return (
-    <NavbarWrapper onClick={handleOnClick}>
-      <NavbarComponent>
-        <BarNav active={active} id="1">
-          <HomeIcon />
-          Home
-        </BarNav>
-        <BarNav active={active} id="2">
-          <CompassIcon />
-          Explore
-        </BarNav>
-        <BarNav active={active} id="3">
-          <SubIcon />
-          Subscriptions
-        </BarNav>
-      </NavbarComponent>
-      <NavbarComponent>
-        <BarNav active={active} id="4">
-          <LibIcon />
-          Library
-        </BarNav>
-        <BarNav active={active} id="5">
-          <HistoryIcon />
-          History
-        </BarNav>
-        <BarNav active={active} id="6">
-          <YourVideosIcon />
-          Your Videos
-        </BarNav>
-        <BarNav active={active} id="7">
-          <WatchLaterIcon />
-          Watch Later
-        </BarNav>
-        <BarNav active={active} id="8">
-          <LikedIcon />
-          Liked Videos
-        </BarNav>
-      </NavbarComponent>
-      <NavbarComponent title="Subscriptions">
-        <BarNav active={active} id="9">
-          <Image src={jacobImg} width="24" height="24" alt="Jacob Music" />
-          Jacob Music
-        </BarNav>
-        <BarNav active={active} id="10">
-          <Image src={unityImg} width="24" height="24" alt="Unity" />
-          Unity
-        </BarNav>
-        <BarNav active={active} id="11">
-          <Image src={guitarImg} width="24" height="24" alt="Guitar Lessons" />
-          Guitar Lessons
-        </BarNav>
-        <BarNav active={active} id="12">
-          <Image src={alexNewsImg} width="24" height="24" alt="Alex News" />
-          Alex News
-        </BarNav>
-        <BarNav active={active} id="13">
-          <Image src={rallyImg} width="24" height="24" alt="Circuit Rally" />
-          Circuit Rally
-        </BarNav>
-        <BarNav active={active} id="14">
-          <Image src={travelImg} width="24" height="24" alt="Travellers" />
-          Travellers
-        </BarNav>
-        <BarNav active={active} id="15">
-          <Image src={machinesImg} width="24" height="24" alt="Machines" />
-          Machines
-        </BarNav>
-      </NavbarComponent>
-      <NavbarComponent title="More from youtube">
-        <BarNav active={active} id="16">
-          <PremiumIcon />
-          YouTube Premium
-        </BarNav>
-        <BarNav active={active} id="17">
-          <GamingIcon />
-          Gaming
-        </BarNav>
-        <BarNav active={active} id="18">
-          <LiveIcon />
-          Live
-        </BarNav>
-        <BarNav active={active} id="19">
-          <GroupIcon />
-          Learning
-        </BarNav>
-        <BarNav active={active} id="20">
-          <SportsIcon />
-          Sports
-        </BarNav>
-      </NavbarComponent>
-      <NavbarComponent>
-        <BarNav active={active} id="21">
-          <SettingsIcon />
-          Settings
-        </BarNav>
-        <BarNav active={active} id="22">
-          <ReportIcon />
-          Report history
-        </BarNav>
-        <BarNav active={active} id="23">
-          <HelpIcon />
-          Help
-        </BarNav>
-      </NavbarComponent>
-    </NavbarWrapper>
-  );
-});
+export const Navbar = hoc(
+  useNavbarProps,
+  ({ active, handleOnClick, openBar }) => {
+    return (
+      <>
+        {openBar && (
+          <NavbarWrapper onClick={handleOnClick}>
+            <NavbarComponent>
+              <BarNav active={active} id="1">
+                <HomeIcon />
+                Home
+              </BarNav>
+              <BarNav active={active} id="2">
+                <CompassIcon />
+                Explore
+              </BarNav>
+              <BarNav active={active} id="3">
+                <SubIcon />
+                Subscriptions
+              </BarNav>
+            </NavbarComponent>
+            <NavbarComponent>
+              <BarNav active={active} id="4">
+                <LibIcon />
+                Library
+              </BarNav>
+              <BarNav active={active} id="5">
+                <HistoryIcon />
+                History
+              </BarNav>
+              <BarNav active={active} id="6">
+                <YourVideosIcon />
+                Your Videos
+              </BarNav>
+              <BarNav active={active} id="7">
+                <WatchLaterIcon />
+                Watch Later
+              </BarNav>
+              <BarNav active={active} id="8">
+                <LikedIcon />
+                Liked Videos
+              </BarNav>
+            </NavbarComponent>
+            <NavbarComponent title="Subscriptions">
+              <BarNav active={active} id="9">
+                <Image
+                  src={jacobImg}
+                  width="24"
+                  height="24"
+                  alt="Jacob Music"
+                />
+                Jacob Music
+              </BarNav>
+              <BarNav active={active} id="10">
+                <Image src={unityImg} width="24" height="24" alt="Unity" />
+                Unity
+              </BarNav>
+              <BarNav active={active} id="11">
+                <Image
+                  src={guitarImg}
+                  width="24"
+                  height="24"
+                  alt="Guitar Lessons"
+                />
+                Guitar Lessons
+              </BarNav>
+              <BarNav active={active} id="12">
+                <Image
+                  src={alexNewsImg}
+                  width="24"
+                  height="24"
+                  alt="Alex News"
+                />
+                Alex News
+              </BarNav>
+              <BarNav active={active} id="13">
+                <Image
+                  src={rallyImg}
+                  width="24"
+                  height="24"
+                  alt="Circuit Rally"
+                />
+                Circuit Rally
+              </BarNav>
+              <BarNav active={active} id="14">
+                <Image
+                  src={travelImg}
+                  width="24"
+                  height="24"
+                  alt="Travellers"
+                />
+                Travellers
+              </BarNav>
+              <BarNav active={active} id="15">
+                <Image
+                  src={machinesImg}
+                  width="24"
+                  height="24"
+                  alt="Machines"
+                />
+                Machines
+              </BarNav>
+            </NavbarComponent>
+            <NavbarComponent title="More from youtube">
+              <BarNav active={active} id="16">
+                <PremiumIcon />
+                YouTube Premium
+              </BarNav>
+              <BarNav active={active} id="17">
+                <GamingIcon />
+                Gaming
+              </BarNav>
+              <BarNav active={active} id="18">
+                <LiveIcon />
+                Live
+              </BarNav>
+              <BarNav active={active} id="19">
+                <GroupIcon />
+                Learning
+              </BarNav>
+              <BarNav active={active} id="20">
+                <SportsIcon />
+                Sports
+              </BarNav>
+            </NavbarComponent>
+            <NavbarComponent>
+              <BarNav active={active} id="21">
+                <SettingsIcon />
+                Settings
+              </BarNav>
+              <BarNav active={active} id="22">
+                <ReportIcon />
+                Report history
+              </BarNav>
+              <BarNav active={active} id="23">
+                <HelpIcon />
+                Help
+              </BarNav>
+            </NavbarComponent>
+          </NavbarWrapper>
+        )}
+      </>
+    );
+  }
+);

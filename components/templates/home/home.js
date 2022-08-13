@@ -5,10 +5,11 @@ import { PremiumAd } from "../../organisms/premium-add/premium-ad.component";
 
 import { Navbar } from "../../organisms/navbar";
 import { HomeTempContent, HomeTempMain } from "./home.style";
+import MainProvider from "../../../context/main-provider";
 
 export const HomeTemp = () => {
   return (
-    <>
+    <MainProvider>
       <Header />
       <HomeTempMain>
         <Navbar />
@@ -17,6 +18,6 @@ export const HomeTemp = () => {
           <PremiumAd />
         </HomeTempContent>
       </HomeTempMain>
-    </>
+    </MainProvider>
   );
 };

@@ -4,12 +4,17 @@ import { Logo } from "../../atoms/logo";
 import Burger from "../../../assets/img/icon-burger.svg";
 
 import { LogoNavBtnWrapper } from "./logo-navbtn.style";
+import { useContext } from "react";
+import MainContext from "../../../context/main-context";
 
 export const LogoNavBtn = () => {
+
+  const {setOpenBar} = useContext(MainContext)
+
   return (
     <LogoNavBtnWrapper>
       <Button>
-        <Burger />
+        <Burger onClick={() => setOpenBar(prev => !prev)} />
       </Button>
       <Logo />
     </LogoNavBtnWrapper>

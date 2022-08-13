@@ -11,14 +11,18 @@ export const NavbarWrapper = styled.nav`
     width: 6px;
     height: 0px;
   }
-  
+
   &::-webkit-scrollbar-track {
     background: #ffffff;
   }
-  
+
   &::-webkit-scrollbar-thumb {
     background-color: #909090;
     border-radius: 20px;
     border: 3px solid #909090;
+  }
+
+  @media only screen and (max-width: 834px) {
+    display: none;
   }
 `;

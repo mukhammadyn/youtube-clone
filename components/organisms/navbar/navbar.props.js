@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import MainContext from "../../../context/main-context";
 
 export const useNavbarProps = () => {
   const [active, setActive] = useState("1");
@@ -7,8 +8,11 @@ export const useNavbarProps = () => {
     if (e.target.matches("a[id]")) setActive(e.target.id);
   };
 
+  const {openBar} = useContext(MainContext)
+
   return {
     active,
     handleOnClick,
+    openBar,
   };
 };
