@@ -1,0 +1,1 @@
+export { HomeTemp } from "./home";
