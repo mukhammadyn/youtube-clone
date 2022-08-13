@@ -16,9 +16,10 @@ export const PremiumAdWrapper = styled.aside`
 export const PremiumAdContent = styled.div``;
 
 export const PremiumAdDesc = styled.p`
+  max-width: 329px;
   margin-top: 16px;
   margin-bottom: 16px;
-  font-family: "Rubik";
+  font-family: "Rubik", "Arial", sans-serif;
   font-weight: 600;
   font-size: 26px;
   line-height: 31px;
