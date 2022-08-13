@@ -6,6 +6,7 @@ import { Navbar } from "../../organisms/navbar";
 import { HomeTempContent, HomeTempMain } from "./home.style";
 import MainProvider from "../../../context/main-provider";
 import { Container } from "../../container";
+import { VideoList } from "../../organisms/video-list";
 
 export const HomeTemp = () => {
   return (
@@ -17,6 +18,7 @@ export const HomeTemp = () => {
           <HomeTempContent>
             <CategoriesFilter />
             <PremiumAd />
+            <VideoList />
           </HomeTempContent>
         </HomeTempMain>
       </Container>
